@@ -1,6 +1,5 @@
 package Metier;
 import Dao.IDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +12,7 @@ public class MetierImpl implements IMetier {
     }
     @Override
     public double calcul() {
-        double t = dao.getData();
-        double result = t*23;
-        return result;
+        return dao.getData()*23;
     }
     /**
      * Pour injecter ds la variable dao un objet
