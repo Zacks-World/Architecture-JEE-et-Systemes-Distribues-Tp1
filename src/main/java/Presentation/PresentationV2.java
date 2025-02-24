@@ -1,7 +1,8 @@
 package Presentation;
 
+import Dao.IDao;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PresentationV2 {
@@ -9,8 +10,10 @@ public class PresentationV2 {
         try {
             Scanner scanner = new Scanner(new File("config.txt"));
             String daoClassname = scanner.nextLine();
-            System.out.println(daoClassname);
-        } catch (FileNotFoundException e) {
+            Class<?> cDao = Class.forName(daoClassname);
+            IDao dao = (IDao) cDao.getConstructor().newInstance();
+            System.out.println(dao.getData());
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
