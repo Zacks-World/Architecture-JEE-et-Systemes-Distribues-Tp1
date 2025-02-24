@@ -8,7 +8,7 @@ public class PresAvecSpringXML {
     public static void main(String[] args) {
         // Configuration de l'application
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-        IMetier metier = (IMetier) context.getBean("metier");
+        IMetier metier = context.getBean(IMetier.class);
         System.out.println("RES="+metier.calcul());
     }
 }
