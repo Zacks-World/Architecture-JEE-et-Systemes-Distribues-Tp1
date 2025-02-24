@@ -251,15 +251,4 @@ src/
 
 ---
 
-## **8. Résultat Attendu**
-
-Pour toutes les approches, le résultat affiché sera :
-
-```
-Version base de données
-RES=529.0
-```
-
----
-
 Ce projet démontre comment l'injection de dépendances peut être réalisée de différentes manières, en fonction des besoins et des préférences de configuration.
